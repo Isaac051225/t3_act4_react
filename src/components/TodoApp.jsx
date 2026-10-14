@@ -1,8 +1,10 @@
 import { useState } from 'react'
 
 function TodoApp({ tareas, agregarTarea, toggleTarea, eliminarTarea }) {
+   //guarda lo que el usuario escribe en el input.
   const [texto, setTexto] = useState('')
 
+ //evento
   const manejarEnvio = (e) => {
     e.preventDefault()
     if (texto.trim() === '') return
@@ -10,6 +12,7 @@ function TodoApp({ tareas, agregarTarea, toggleTarea, eliminarTarea }) {
     setTexto('')
   }
 
+  // Calculamos cuántas tareas no están completadas
   const pendientes = tareas.filter((t) => !t.completada).length
 
   return (
