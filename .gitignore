@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Variables de entorno (claves y datos secretos)
+.env
+.env.*
+!.env.example
+
+# Archivos del sistema operativo
+Thumbs.db
+
+# Reportes de pruebas
+coverage
