@@ -1,10 +1,11 @@
 
-//<></>  |  Fragment
+// Importamos el hook useState desde React
 import { useState } from 'react'
 import './App.css'
 import TodoApp from './components/TodoApp'
 
 function App() {
+  //tareas es el valor actual y setTareas es la ÚNICA forma de cambiarlo.
   const [tareas, setTareas] = useState([
     { id: 1, text: 'Ver el video de React', completada: true },
     { id: 2, text: 'Crear mi proyecto', completada: false },
